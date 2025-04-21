@@ -23,12 +23,12 @@ variable "bucket_arn" {
   nullable = false
 }
 
-# variable "lambda_security_group_ids" {
-#   type = list(string)
-#   nullable = false
-# }
+variable "lambda_security_group_ids" {
+  type = list(string)
+  nullable = false
+}
 
-# variable "subnet_ids" {
-#   type = list(string)
-#   nullable = false
-# }
+variable "subnet_ids" {
+  type = list(string)
+  nullable = false
+}

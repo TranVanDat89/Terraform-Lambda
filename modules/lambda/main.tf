@@ -62,10 +62,10 @@ resource "aws_lambda_function" "this" {
   runtime = "nodejs18.x"
   filename = var.lambda_filename
   source_code_hash = filebase64sha256(var.lambda_filename)
-  # vpc_config {
-  #   security_group_ids = var.lambda_security_group_ids
-  #   subnet_ids = var.subnet_ids
-  # }
+  vpc_config {
+    security_group_ids = var.lambda_security_group_ids
+    subnet_ids = var.subnet_ids
+  }
   environment {
     variables = {
         DYNAMODB_TABLE = var.dynamodb_table_name
